@@ -2,18 +2,32 @@
 
 int main(void)
 {
-    int num;
-    int sum = 0;
+    int num1, num2;
+    char op;
 
-    printf("정수를 입력하세요: ");
-    scanf("%d", &num);
+    printf("계산식을 입력하세요: ");
+    scanf("%d %c %d", &num1, &op, &num2);
 
-    for (int i = 1; i <= num; i++)
+    if (op == '+')
     {
-        sum = sum + i;
+        printf("%d + %d = %d\n", num1, num2, num1 + num2);
     }
-
-    printf("합계: %d\n", sum);
+    else if (op == '-')
+    {
+        printf("%d - %d = %d\n", num1, num2, num1 - num2);
+    }
+    else if (op == '*')
+    {
+        printf("%d * %d = %d\n", num1, num2, num1 * num2);
+    }
+    else if (op == '/')
+    {
+        printf("%d / %d = %d\n", num1, num2, num1 / num2);
+    }
+    else
+    {
+        printf("잘못된 연산자입니다.\n");
+    }
 
     return 0;
 }
