@@ -2,20 +2,18 @@
 
 int main(void)
 {
-    int c;
-    int num = 0;
+    int num;
+    int sum = 0;
 
-    printf("문자열을 입력하세요: ");
+    printf("정수를 입력하세요: ");
+    scanf("%d", &num);
 
-    while ((c = getchar()) != '\n')
+    for (int i = 1; i <= num; i++)
     {
-        if (c >= '0' && c <= '9')
-        {
-            num++;
-        }
+        sum = sum + i;
     }
 
-    printf("숫자의 개수: %d\n", num);
+    printf("합계: %d\n", sum);
 
     return 0;
 }
